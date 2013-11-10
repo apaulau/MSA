@@ -5,10 +5,10 @@ library(knitr)
 library(psych)
 
 #' Initializing variables
-mu <- c(1, 2)
-rho <- c(-.5, 0, .5)
-sigma1 <- sqrt(1);
-sigma2 <- sqrt(4);
+mu <- c(-1, 1)
+rho <- c(-.4, .4, 1)
+sigma1 <- sqrt(4);
+sigma2 <- sqrt(1);
 probability <- .95
 
 print(mu)

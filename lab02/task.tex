@@ -1,0 +1,64 @@
+\documentclass[a4paper]{article}
+
+\usepackage[russian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amssymb,amsthm,amsmath,amscd}
+\usepackage{graphicx}
+
+%Оформление теорем, лемм и т.д.
+\theoremstyle{plain} % default
+\newtheorem{Theorem}{Теорема}
+\newtheorem{Lemma}{Лемма}
+\newtheorem{Proposition}{Предложение}
+\newtheorem{Corollary}{Следствие}
+\newtheorem{Statement}{Утверждение}
+
+\title{Многомерный статистический анализ}
+\author{Павлов Александр Сергеевич}
+
+\begin{document}
+
+\maketitle
+
+\section*{Лабораторная работа 2.4}
+
+\subsection*{Постановка задачи}
+
+Наблюдается случайная выборка $X = \{x_1, \ldots, x_n\}$ из распределения $\mathcal{N}_N(\mu, \Sigma_0)$, $\Sigma_0$ — заданная матрица. Найти ОМП-оценку параметра $\mu$, выписать распределение оценки. Построить доверительную область для $\mu$, воспользовавшись материалами лекции 1 и 2.
+
+\subsection*{Фрагменты конспекта лекций}
+
+\begin{Theorem}
+Пусть $X = (x_1, \ldots, x_n)$, $x_i \sim \mathcal{N}_N(\mu, \Sigma)$. Тогда ОМП-оценками параметров являются:
+\begin{equation}
+\hat{\mu} = \bar{x} = \frac{1}{n} \sum_{i=1}^n{x_i},
+\end{equation}
+\begin{equation}
+\hat{\Sigma} = \frac{1}{n}A, A = \sum_{\alpha=1}^n{(x_\alpha - \bar{x})(x_\alpha - \bar{x})^T}
+\end{equation}
+\end{Theorem}
+
+\begin{Theorem}
+Пусть $X = (x_1, \ldots, x_n)$, $x_i \sim \mathcal{N}_N(\mu, \Sigma)$ и являются независимыми. Тогда:
+\begin{equation}
+\bar{x} \sim \mathcal{N}_N(\mu, \frac{1}{n}\Sigma),
+\end{equation}
+\begin{equation}
+A \sim \mathcal{W}_N(\Sigma, n-1),
+\end{equation}
+$\bar{x}, A$ — независимые
+\end{Theorem}
+
+\subsection*{Решение задачи}
+
+Воспользуемся материалами лекций. По теореме 1 \textit{об оценках максимального правдоподобия} получаем оценку для параметра $\mu$ из (1):
+
+\begin{equation*}
+\hat{\mu} = \bar{x} = \frac{1}{n} \sum_{i=1}^n{x_i}
+\end{equation*}
+По теореме 2 \textit{о распределении ОМП-оценок} из (3):
+\begin{equation*}
+\bar{\mu} \sim \mathcal{N}_N(\mu, \frac{1}{n}\Sigma)
+\end{equation*}
+
+\end{document}
